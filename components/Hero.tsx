@@ -27,7 +27,7 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,19 +50,20 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-white leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 text-white leading-tight"
           >
             Entenda qualquer{" "}
             <span className="text-[#2EE59D]">contrato</span>
-            <br />
-            antes ou depois de assinar
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> antes ou depois</span>
+            <span className="hidden sm:inline"> antes ou depois</span> de assinar
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed"
           >
             Vai assinar? Descubra{" "}
             <strong className="text-white">
@@ -78,17 +79,17 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-xs sm:max-w-none mx-auto"
           >
             <button
               onClick={() => scrollToSection("how-it-works")}
-              className="px-8 py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Analisar um contrato
             </button>
             <button
               onClick={() => scrollToSection("how-it-works")}
-              className="px-8 py-4 bg-white/10 text-white rounded-lg font-semibold text-lg hover:bg-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/20 backdrop-blur-sm"
+              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-white/10 text-white rounded-lg font-semibold text-sm sm:text-lg hover:bg-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/20 backdrop-blur-sm"
             >
               Como funciona
             </button>
@@ -99,7 +100,7 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1 }}
-            className="mt-16 flex flex-wrap justify-center gap-8 max-w-3xl mx-auto"
+            className="mt-8 sm:mt-16 flex flex-wrap justify-center gap-4 sm:gap-8 max-w-3xl mx-auto"
           >
             {[
               { icon: <Camera size={24} weight="fill" className="text-[#2EE59D]" />, label: "Análise por foto" },
@@ -127,7 +128,7 @@ const Hero = () => {
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
+        className="hidden sm:block absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
         <div className="w-6 h-10 border-2 border-[#2EE59D]/50 rounded-full flex justify-center">
           <motion.div

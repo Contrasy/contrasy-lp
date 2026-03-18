@@ -61,19 +61,19 @@ const FAQ = () => {
     <section
       id="faq"
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-white py-20 px-6"
+      className="min-h-screen flex items-center justify-center bg-white py-16 sm:py-20 px-4 sm:px-6"
     >
       <div className="max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#0F172A]">
             Perguntas <span className="text-[#2EE59D]">frequentes</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-base sm:text-xl text-gray-600">
             Tire suas dúvidas sobre como o Contrasy funciona
           </p>
         </motion.div>
@@ -91,9 +91,9 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                className="w-full px-4 py-4 sm:px-8 sm:py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
               >
-                <span className="text-lg font-semibold text-[#0F172A] pr-8">
+                <span className="text-sm sm:text-lg font-semibold text-[#0F172A] pr-4 sm:pr-8">
                   {faq.question}
                 </span>
                 <motion.span
@@ -114,7 +114,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-8 pb-6 text-gray-600 leading-relaxed">
+                    <div className="px-4 pb-4 sm:px-8 sm:pb-6 text-sm sm:text-base text-gray-600 leading-relaxed">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -130,10 +130,10 @@ const FAQ = () => {
           transition={{ delay: 0.8 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-600 mb-4">
+          <p className="text-sm sm:text-base text-gray-600 mb-4">
             Ainda com dúvidas? Estamos aqui para ajudar
           </p>
-          <button className="px-8 py-3 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all">
+          <button className="px-6 py-2.5 sm:px-8 sm:py-3 bg-[#2EE59D] text-[#0F172A] rounded-lg text-sm sm:text-base font-semibold hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all">
             Falar com suporte
           </button>
         </motion.div>

@@ -36,7 +36,7 @@ const Benefits = () => {
   return (
     <section
       id="pain-points"
-      className="min-h-screen flex items-center justify-center bg-[#E9FBF3]/30 py-20 px-6"
+      className="min-h-screen flex items-center justify-center bg-[#E9FBF3]/30 py-16 sm:py-20 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
@@ -44,18 +44,18 @@ const Benefits = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#0F172A]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#0F172A]">
             Você já passou por isso?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Vai assinar e quer se proteger? Ou já assinou e quer entender seus direitos?{" "}
             <strong className="text-[#0F172A]">Nos dois casos, Contrasy te ajuda.</strong>
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-5xl mx-auto">
           {painPoints.map((pain, index) => (
             <PainPointCard key={index} pain={pain} index={index} />
           ))}
@@ -68,11 +68,11 @@ const Benefits = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="inline-block bg-white px-8 py-6 rounded-2xl shadow-lg border border-[#2EE59D]/20">
-            <p className="text-lg text-gray-700 mb-2">
+          <div className="inline-block bg-white px-5 py-4 sm:px-8 sm:py-6 rounded-2xl shadow-lg border border-[#2EE59D]/20">
+            <p className="text-base sm:text-lg text-gray-700 mb-2">
               <strong className="text-[#0F172A]">A boa notícia?</strong>
             </p>
-            <p className="text-xl text-[#0F172A] font-semibold">
+            <p className="text-base sm:text-xl text-[#0F172A] font-semibold">
               Nunca é cedo ou tarde demais para entender o que está no seu contrato
             </p>
           </div>
@@ -102,20 +102,20 @@ const PainPointCard = ({
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+      className="bg-white p-5 sm:p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
     >
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{ delay: 0.2 + index * 0.1, type: "spring" }}
-        className="text-5xl mb-4"
+        className="text-4xl sm:text-5xl mb-3 sm:mb-4"
       >
         {pain.icon}
       </motion.div>
-      <h3 className="text-2xl font-bold mb-3 text-[#0F172A]">
+      <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-3 text-[#0F172A]">
         {pain.title}
       </h3>
-      <p className="text-gray-600 leading-relaxed">
+      <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
         {pain.description}
       </p>
     </motion.div>

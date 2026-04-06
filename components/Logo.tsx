@@ -24,3 +24,11 @@ export function Logo({ size = 'md', className = '' }: LogoProps) {
     </div>
   )
 }
+
+export function LogoIcon({ size = 'md', className = '' }: LogoProps) {
+  const s = sizes[size]
+
+  return (
+    <Sparkle className={`${s.icon} text-[#2EE59D] ${className}`} weight="fill" />
+  )
+}

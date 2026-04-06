@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Camera, MagnifyingGlass, ChatText, Scales } from "@phosphor-icons/react";
+import { Camera, MagnifyingGlass, ChatText, Scales, Bell } from "@phosphor-icons/react";
 
 const Features = () => {
   const ref = useRef(null);
@@ -29,10 +29,10 @@ const Features = () => {
         "Transformamos juridiquês em linguagem clara e objetiva. Entenda o que você concordou ou está prestes a concordar.",
     },
     {
-      icon: <Scales size={56} weight="fill" className="text-[#2EE59D]" />,
-      title: "Seus direitos e opções",
+      icon: <Bell size={56} weight="fill" className="text-[#2EE59D]" />,
+      title: "Alertas antes do prazo vencer",
       description:
-        "Mostramos os riscos e benefícios do contrato, e o que você pode fazer — seja antes de assinar ou depois.",
+        "A IA identifica prazos, pagamentos e obrigações do contrato e cria alertas automáticos — por WhatsApp, e-mail ou no app — para você nunca ser pego de surpresa.",
     },
   ];
 

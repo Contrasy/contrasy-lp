@@ -11,22 +11,19 @@ const Pricing = () => {
 
   const trustPoints = [
     {
-      title: "Contrasy não substitui um advogado",
-      description:
-        "Somos uma ferramenta de análise e compreensão. Para situações complexas ou contratos de alto valor, recomendamos consultar um advogado — mas podemos te ajudar a entender o básico.",
-      icon: <Scales size={56} weight="fill" className="text-[#2EE59D]" />,
+      title: "Não substitui um advogado",
+      description: "Somos uma ferramenta de análise, não aconselhamento jurídico.",
+      icon: <Scales size={32} weight="fill" className="text-[#2EE59D]" />,
     },
     {
-      title: "Funciona para contratos novos e antigos",
-      description:
-        "Analise contratos que vai assinar ou documentos que já assinou. Aluguel, serviços, assinaturas, compra e venda, termos de uso — tudo do dia a dia.",
-      icon: <FileText size={56} weight="fill" className="text-[#2EE59D]" />,
+      title: "Contratos novos e antigos",
+      description: "Aluguel, serviços, compra e venda, termos de uso — novos ou antigos.",
+      icon: <FileText size={32} weight="fill" className="text-[#2EE59D]" />,
     },
     {
-      title: "Seus documentos estão seguros",
-      description:
-        "Usamos criptografia de ponta a ponta. Seus contratos são processados e depois deletados automaticamente. Nunca compartilhamos ou vendemos seus dados.",
-      icon: <Lock size={56} weight="fill" className="text-[#2EE59D]" />,
+      title: "Seus dados estão seguros",
+      description: "Criptografia ponta a ponta. Seus dados nunca são compartilhados.",
+      icon: <Lock size={32} weight="fill" className="text-[#2EE59D]" />,
     },
   ];
 
@@ -55,7 +52,7 @@ const Pricing = () => {
     <section
       id="trust"
       ref={ref}
-      className="min-h-screen flex items-center justify-center bg-[#E9FBF3]/30 py-16 sm:py-20 px-4 sm:px-6"
+      className="flex items-center justify-center bg-[#E9FBF3]/30 py-16 sm:py-20 px-4 sm:px-6"
     >
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
@@ -69,7 +66,7 @@ const Pricing = () => {
             <span className="text-[#2EE59D]">transparência</span>
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Queremos ser honestos sobre o que fazemos e como ajudamos
+            Ajudamos você a entender contratos do dia a dia — com honestidade e segurança
           </p>
         </motion.div>
 
@@ -83,46 +80,24 @@ const Pricing = () => {
             <motion.div
               key={index}
               variants={cardVariants}
-              whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-[#2EE59D]/20 p-5 sm:p-8"
+              whileHover={{ y: -4 }}
+              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-[#2EE59D]/20 p-4 sm:p-6 flex items-start gap-4"
             >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={isInView ? { scale: 1 } : { scale: 0 }}
-                transition={{ delay: 0.2 + index * 0.1, type: "spring" }}
-                className="text-4xl sm:text-6xl mb-4 sm:mb-6"
-              >
+              <div className="shrink-0 mt-0.5">
                 {point.icon}
-              </motion.div>
-
-              <h3 className="text-lg sm:text-2xl font-bold mb-2 sm:mb-4 text-[#0F172A]">
-                {point.title}
-              </h3>
-
-              <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">
-                {point.description}
-              </p>
+              </div>
+              <div>
+                <h3 className="text-base sm:text-lg font-bold text-[#0F172A] mb-1">
+                  {point.title}
+                </h3>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                  {point.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ delay: 0.8 }}
-          className="text-center mt-16 max-w-3xl mx-auto"
-        >
-          <div className="bg-white p-5 sm:p-8 rounded-2xl shadow-lg border-2 border-[#2EE59D]/20">
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-[#0F172A]">
-              Nossa missão
-            </h3>
-            <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
-              Ajudar você a entender contratos comuns —{" "}
-              <strong className="text-[#0F172A]">antes de assinar para se precaver, ou depois para conhecer seus direitos</strong>.{" "}
-              Somos uma camada de clareza e compreensão, não substituímos o aconselhamento jurídico profissional.
-            </p>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

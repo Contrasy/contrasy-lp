@@ -46,38 +46,7 @@ const Footer = () => {
   return (
     <>
       {/* CTA Final */}
-      <section className="bg-gradient-to-br from-[#2EE59D]/10 to-[#E9FBF3] py-16 sm:py-20 px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-[#0F172A]">
-              Entenda seu contrato agora
-            </h2>
-            <p className="text-base sm:text-xl text-gray-600 mb-6 sm:mb-8 leading-relaxed">
-              Vai assinar? Se precava. Já assinou? Conheça seus direitos.
-              <br />
-              <strong className="text-[#0F172A]">
-                Clareza e confiança em qualquer momento
-              </strong>
-            </p>
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="px-6 py-3 sm:px-10 sm:py-5 bg-[#2EE59D] text-[#0F172A] rounded-lg font-bold text-sm sm:text-xl hover:bg-[#1FCC8C] hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            >
-              Analisar meu contrato agora
-            </button>
-            <p className="text-xs sm:text-sm text-gray-500 mt-4 sm:mt-6 flex items-center justify-center gap-3 sm:gap-4">
-              <span className="flex items-center gap-1"><Lightning size={16} weight="fill" className="text-[#2EE59D]" /> Resultado em segundos</span>
-              <span>•</span>
-              <span className="flex items-center gap-1"><Lock size={16} weight="fill" className="text-[#2EE59D]" /> 100% seguro e privado</span>
-            </p>
-          </motion.div>
-        </div>
-      </section>
+
 
       <footer className="bg-[#0F172A] text-white py-12 sm:py-16 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">

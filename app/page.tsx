@@ -8,10 +8,12 @@ import Plans from "@/components/Plans";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <div className="overflow-x-hidden">
+      <JsonLd />
       <Navbar />
       <Hero />
       <Benefits />

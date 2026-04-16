@@ -75,7 +75,7 @@ const Navbar = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            onClick={() => scrollToSection("hero")}
+            onClick={() => window.open("https://app.contrasyai.com/try", "_blank")}
             className="hidden md:block px-6 py-2 rounded-lg font-semibold bg-[#2EE59D] text-[#0F172A] hover:bg-[#1FCC8C] hover:shadow-lg hover:scale-105 transition-all"
           >
             Analisar Contrato

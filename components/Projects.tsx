@@ -130,15 +130,14 @@ const Projects = () => {
           <p className="text-base sm:text-lg text-gray-600 mb-6">
             Vai assinar ou já assinou? Nos dois casos, clareza faz toda a diferença.
           </p>
-          <button
-            onClick={() => {
-              const element = document.getElementById("benefits");
-              if (element) element.scrollIntoView({ behavior: "smooth" });
-            }}
-            className="px-6 py-3 sm:px-8 sm:py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300"
+          <a
+            href="https://app.contrasyai.com/try"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-6 py-3 sm:px-8 sm:py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300 inline-block"
           >
             Analisar um contrato agora
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>

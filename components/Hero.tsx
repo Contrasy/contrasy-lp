@@ -81,12 +81,14 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center max-w-xs sm:max-w-none mx-auto"
           >
-            <button
-              onClick={() => scrollToSection("how-it-works")}
-              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300"
+            <a
+              href="https://app.contrasyai.com/try"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-[#2EE59D] text-[#0F172A] rounded-lg font-semibold text-sm sm:text-lg hover:bg-[#1FCC8C] hover:shadow-xl hover:scale-105 transition-all duration-300 text-center"
             >
               Analisar um contrato
-            </button>
+            </a>
             <button
               onClick={() => scrollToSection("how-it-works")}
               className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-white/10 text-white rounded-lg font-semibold text-sm sm:text-lg hover:bg-white/20 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-white/20 backdrop-blur-sm"
